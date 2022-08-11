@@ -13,14 +13,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tdrevitchvgrdn/VGRDN-Retail-Wholesale.git"
+        "url": "git+https://github.com/"
     },
     "author": "Tim Drevitch",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/tdrevitchvgrdn/VGRDN-Retail-Wholesale/issues"
+        "url": "https://github.com/"
     },
-    "homepage": "https://github.com/tdrevitchvgrdn/VGRDN-Retail-Wholesale#readme",
+    "homepage": "https://github.com/",
     "dependencies": {
         "cors": "^2.8.5",
         "dotenv": "^16.0.1",
