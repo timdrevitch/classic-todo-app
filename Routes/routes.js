@@ -2,6 +2,13 @@ const router = require("express").Router()
 
 let Todo = require("../Models/todosModel")
 
+//Find all todos
+router.route("/gettodos").get((req, res) => {
+    Todo.find()
+        .then(Todo => res.json(Todo))
+        .catch(err => res.status(400).json("Error: " + err))
+})
+
 //Create new todo
 router.route("/createtodo").post((req, res) => {
     const todo = "test todo"
