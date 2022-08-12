@@ -9,13 +9,26 @@ router.route("/gettodos").get((req, res) => {
         .catch(err => res.status(400).json("Error: " + err))
 })
 
+//Delete todo
+router.route("/removetodo/:id").delete((req, res) => {
+    Todo.findByIdAndDelete({_id: req.params.id})
+        .then(res.json("Todo deleted"))
+        .catch(err => res.status(400).json("Error: " + err))
+})
+
+//Complete todo
+router.route("/completetodo/:id").put((req, res) => {
+    Todo.updateOne({_id: req.params.id}, {$set:{isDone: true}})
+        .then(() => res.json("Todo completed"))
+        .catch(err => res.status(400).json("Error: " + err))
+})
+
 //Create new todo
 router.route("/createtodo").post((req, res) => {
     const todo = "test todo"
     const dueDate = "today"
     const author = "Tim Drevitch"
     const isDone = false
-
     const newTodo = new Todo({
         todo,
         dueDate,

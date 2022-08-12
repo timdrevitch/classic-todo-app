@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
 
 const App = () => {
-    const [url, setUrl] = useState("http://localhost:4000") // https://classictodoapp.herokuapp.com || http://localhost:4000
+    const [url, setUrl] = useState("http://localhost:4000/api") // https://classictodoapp.herokuapp.com || http://localhost:4000
     const [themeGreen, setThemeGreen] = useState("#5fc75d")
     const [themeLightBlue, setThemeLightBlue] = useState("#36868f")
 

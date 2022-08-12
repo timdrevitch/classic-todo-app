@@ -23,9 +23,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 //update this to the endpoint you declare in routes.js
-app.use("/", route)
+app.use("/api/", route)
 
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"))
 })
 
