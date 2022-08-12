@@ -7,13 +7,15 @@ const App = () => {
     const [url, setUrl] = useState("http://localhost:4000/api") // https://classictodoapp.herokuapp.com || http://localhost:4000
     const [themeGreen, setThemeGreen] = useState("#5fc75d")
     const [themeLightBlue, setThemeLightBlue] = useState("#36868f")
+    const [ifCreationFormIsOpen, setIfCreationFormIsOpen] = useState(false)
 
     return (
         <Router>
             <Context.Provider value={{
                   url, setUrl,
                   themeGreen, setThemeGreen,
-                  themeLightBlue, setThemeLightBlue
+                  themeLightBlue, setThemeLightBlue,
+                  ifCreationFormIsOpen, setIfCreationFormIsOpen,
                 }}>
                 <Routes>
                     <Route path="/" element={<Home/>}/>

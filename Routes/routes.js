@@ -5,6 +5,7 @@ let Todo = require("../Models/todosModel")
 //Find all todos
 router.route("/gettodos").get((req, res) => {
     Todo.find()
+        .sort({_id: -1})
         .then(Todo => res.json(Todo))
         .catch(err => res.status(400).json("Error: " + err))
 })
@@ -25,14 +26,14 @@ router.route("/completetodo/:id").put((req, res) => {
 
 //Create new todo
 router.route("/createtodo").post((req, res) => {
-    const todo = "test todo"
-    const dueDate = "today"
-    const author = "Tim Drevitch"
+    const todo = req.body.todo
+    const author = req.body.author
+    const dueDate = req.body.dueDate
     const isDone = false
     const newTodo = new Todo({
         todo,
-        dueDate,
         author,
+        dueDate,
         isDone
     })
     newTodo.save()//save todo to db
