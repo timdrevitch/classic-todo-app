@@ -1,4 +1,4 @@
-# 📥 Classic Todo App 🧾
+# ✅ Classic Todo App ✅
 
 <img width="1435" alt="Screen Shot 2022-08-16 at 3 18 27 PM" src="https://user-images.githubusercontent.com/110933291/184963808-50641dee-9686-4059-9f62-f074c131463f.png">
 
