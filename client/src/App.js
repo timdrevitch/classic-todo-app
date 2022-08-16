@@ -1,6 +1,6 @@
-import { useState } from "react"
-import { Context } from "./Context"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import {useState} from "react"
+import {Context} from "./Context"
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 
@@ -13,11 +13,11 @@ const App = () => {
     return (
         <Router>
             <Context.Provider value={{
-                  url, setUrl,
-                  themeGreen, setThemeGreen,
-                  themeLightBlue, setThemeLightBlue,
-                  ifCreationFormIsOpen, setIfCreationFormIsOpen,
-                }}>
+                url, setUrl,
+                themeGreen, setThemeGreen,
+                themeLightBlue, setThemeLightBlue,
+                ifCreationFormIsOpen, setIfCreationFormIsOpen,
+            }}>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>

@@ -4,23 +4,24 @@ import { Context } from "../Context"
 
 const CreateTodo = () => {
 
+    //context
     const {url, setIfCreationFormIsOpen} = useContext(Context)
+
+    //state
     const [todo, setTodo] = useState("")
     const [author, setAuthor] = useState("")
     const [dueDate, setDueDate] = useState("")
 
+    //create a new todo
     const createNewTodo = () => {
-        let data = {
-            todo: todo,
-            author: author,
-            dueDate: dueDate
-        }
+        let data = {todo: todo, author: author, dueDate: dueDate}
         axios.post(`${url}/createtodo`, data)
             .then(response => console.log(response.data))
             .catch(err => console.log(err))
             .then(() => setIfCreationFormIsOpen(false))
     }
 
+    //Change state on input field changes
     const changeTodo = val => setTodo(val)
     const changeAuthor = val => setAuthor(val)
     const changeDueDate = val => setDueDate(val)

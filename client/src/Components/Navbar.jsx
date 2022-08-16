@@ -5,10 +5,10 @@ import AllNavButtons from "./AllNavButtons"
 
 const Navbar = () => {
 
-    //state (1)
+    //state
     const [menu, setMenu] = useState(false)
 
-    //functions (2)
+    //functions
     const openMenu = () => {setMenu(true)}
     const closeMenu = () => {setMenu(false)}
     

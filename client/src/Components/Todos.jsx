@@ -8,9 +8,13 @@ import CreateTodo from "./CreateTodo"
 
 const Todos = () => {
 
+    //context
     const {url, ifCreationFormIsOpen, setIfCreationFormIsOpen} = useContext(Context)
+
+    //state
     const [todos, setTodos] = useState([])
 
+    //get all todos sorted by most recent first
     useEffect(() => {
         const cancelToken = axios.CancelToken.source()
         axios.get(`${url}/gettodos`, {cancelToken: cancelToken.token})
@@ -26,21 +30,23 @@ const Todos = () => {
         return () => cancelToken.cancel()
     })
 
+    //delete a todo
     const removeTodo = (id) => {
         axios.delete(`${url}/removetodo/${id}`)
             .then(response => console.log(response))
             .catch(err => console.log(err))
     }
 
+    //update a todo to be completed
     const completeTodo = (id) => {
         axios.put(`${url}/completetodo/${id}`)
             .then(response => console.log(response))
             .catch(err => console.log(err))
     }
 
+    //open creation form
     const openCreationForm = () => {
         setIfCreationFormIsOpen(true)
-        console.log(ifCreationFormIsOpen)
     }
 
     return (
