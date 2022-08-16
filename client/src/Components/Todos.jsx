@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useContext, useEffect, useState } from "react"
 import { Context } from "../Context"
+import { CreateTodoButton, FullTodosContainer, TodosTitle, TodosTitleContainer } from "../Styles/HomeStyles"
 import CreateTodo from "./CreateTodo"
 
 const Todos = () => {
@@ -32,11 +33,11 @@ const Todos = () => {
     }
 
     return (
-        <div style={{width: "65%", margin: "10px auto", border: "1px solid black", borderRadius: "10px", padding: "2rem", backgroundColor: "#282c34"}}>
-            <div style={{position: "absolute", width: "65%"}}>
-                <h1 style={{display: "inline-block", float: "left", margin: "10px"}}>Todos</h1>
-                <button onClick={openCreationForm} style={{cursor: "pointer", display: "inline-block", backgroundColor: "darkgreen", color: "white", border: "none", borderRadius: "5px", padding: "1rem 2rem", float: "right", margin: "10px"}}>Create Task</button>
-            </div>
+        <FullTodosContainer>
+            <TodosTitleContainer>
+                <TodosTitle>Todos</TodosTitle>
+                <CreateTodoButton onClick={openCreationForm}>Create Task</CreateTodoButton>
+            </TodosTitleContainer>
             {ifCreationFormIsOpen ? (
                 <CreateTodo/>
             ) : null}
@@ -53,7 +54,7 @@ const Todos = () => {
                 ))}
             </div>
             <br/>
-        </div>
+        </FullTodosContainer>
     )
 }
 
