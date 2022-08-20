@@ -18,10 +18,11 @@ export const NavElementsContainer = styled.div`
 export const MenuContainer = styled.div`
     position: sticky;
     background: #282c34;
-    width: 180px;
+    width: 120px;
     float: right;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.8);
-    margin-top: 5px;
+    margin-top: -3px;
+    text-align: left;
 `
 export const MenuCloseButton = styled.button`
     background: none;
