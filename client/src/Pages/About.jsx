@@ -20,7 +20,7 @@ const About = () => {
                         <GrGithub/> Check out my projects on Github
                     </div>
                     <div>
-                        <GrTwitter/> 
+                        <GrTwitter/> Follow my dev Twitter account
                     </div>
                 </div>
             </div>
