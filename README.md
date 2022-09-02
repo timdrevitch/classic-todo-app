@@ -15,9 +15,9 @@ This is an application created to show my ability to put together a front-to-bac
 In the app, users can perform all 4 typical CRUD opperations. They can create todos, read all active todos, update todos to be complete, and delete todos.
 
 🔸 **Stack:**
-This application is using the MERN development stack. For the frontend/client, we are using
+This application is using the MERN development stack. For the frontend/client, I am using
 React⚛️ along with several other dependencies including Axios🅰, React Icons⚛️, React Oauth/Google🅶,
-and Styled Components💅. For the backend/server, we are using NodeJS🅝 along with several other
+and Styled Components💅. For the backend/server, I am using NodeJS🅝 along with several other
 dependencies including ExpressJS🅔, Cors〄, Dotenv🔐, Nodemon☿, Concurrently⇶, and Mongoose🌱. The app
 is being hosted by Heroku♊️ and the database is located on MongoDB Atlas🌱.
 
