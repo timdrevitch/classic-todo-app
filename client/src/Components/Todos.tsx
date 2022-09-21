@@ -1,6 +1,7 @@
 import axios from "axios"
-import { useContext, useEffect, useState } from "react"
+import { FC, useContext, useEffect, useState } from "react"
 import { Context } from "../Context"
+import { ITodo } from "../Interfaces/ITodo"
 import {
   CompleteTodoButton,
   CreateTodoButton,
@@ -16,13 +17,11 @@ import {
 } from "../Styles/HomeStyles"
 import CreateTodo from "./CreateTodo"
 
-const Todos = () => {
-  //context
+const Todos: FC = (): JSX.Element => {
   const { url, ifCreationFormIsOpen, setIfCreationFormIsOpen } =
     useContext(Context)
 
-  //state
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState<ITodo[]>([])
 
   //get all todos sorted by most recent first
   useEffect(() => {
@@ -41,7 +40,7 @@ const Todos = () => {
   })
 
   //delete a todo
-  const removeTodo = (id) => {
+  const removeTodo = (id: string): void => {
     axios
       .delete(`${url}/removetodo/${id}`)
       .then((response) => console.log(response))
@@ -49,29 +48,24 @@ const Todos = () => {
   }
 
   //update a todo to be completed
-  const completeTodo = (id) => {
+  const completeTodo = (id: string): void => {
     axios
       .put(`${url}/completetodo/${id}`)
       .then((response) => console.log(response))
       .catch((err) => console.log(err))
   }
 
-  //open creation form
-  const openCreationForm = () => {
-    setIfCreationFormIsOpen(true)
-  }
-
   return (
     <FullTodosContainer>
       <TodosTitleContainer>
         <TodosTitle>Todos</TodosTitle>
-        <CreateTodoButton onClick={openCreationForm}>
+        <CreateTodoButton onClick={() => setIfCreationFormIsOpen(true)}>
           Create Task
         </CreateTodoButton>
       </TodosTitleContainer>
       {ifCreationFormIsOpen && <CreateTodo />}
       <TodosContainer>
-        {todos.map((todo, index) => (
+        {todos?.map((todo, index) => (
           <TodosInfo key={index}>
             <TodoItem>
               <h5>
