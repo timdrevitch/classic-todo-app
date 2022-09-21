@@ -2,8 +2,8 @@ node_modules
 .DS_Store
 client/.DS_Store
 client/src/.DS_Store
-.env
-client/.env
+#.env
+#client/.env
 
 # dependencies
 /node_modules
