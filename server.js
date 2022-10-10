@@ -8,13 +8,13 @@ const PORT = process.env.PORT || 4000
 const app = express()
 
 // set up rate limiter: maximum of ten requests per minute
-var RateLimit = require("express-rate-limit")
-var limiter = RateLimit({
-  windowMs: 1 * 60 * 1000, // 1 minute
-  max: 10,
-})
+// var RateLimit = require("express-rate-limit")
+// var limiter = RateLimit({
+//   windowMs: 1 * 60 * 1000, // 1 minute
+//   max: 10,
+// })
 
-app.use(limiter)
+// app.use(limiter)
 app.use(cors())
 app.use(express.static(path.join(__dirname, "client", "build")))
 
