@@ -26,7 +26,7 @@
     "@types/lodash": "^4.14.195",
     "@types/node": "^18.14.5",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "lodash": "^4.17.21",
     "mongoose": "^7.3.1",
