@@ -33,7 +33,7 @@
     "ordinal": "^1.0.3"
   },
   "devDependencies": {
-    "concurrently": "^8.2.1",
+    "concurrently": "^8.2.2",
     "nodemon": "^2.0.22",
     "ts-loader": "^9.5.0",
     "ts-node": "^10.9.1",
