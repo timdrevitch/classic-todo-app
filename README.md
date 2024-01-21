@@ -1,6 +1,10 @@
-# ✅ Classic Todo App ✅
+<p align="center">
+<img width="500" align="center" alt="TitleImage" src="https://user-images.githubusercontent.com/110933291/184963808-50641dee-9686-4059-9f62-f074c131463f.png">
+</p>
 
-<img width="1435" alt="Screen Shot 2022-08-16 at 3 18 27 PM" src="https://user-images.githubusercontent.com/110933291/184963808-50641dee-9686-4059-9f62-f074c131463f.png">
+<h1 align="center"><em>Classic Todo App</em></h1>
+<p align="center">Full-stack web application created using React, Node, Express, MongoDB, TypeScript, and REST.
+  Create, read, update, and delete todo list items.</p>
 
 **Welcome to the Classic Todo App!**
 
