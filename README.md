@@ -4,6 +4,8 @@
 
 **Welcome to the Classic Todo App!**
 
+🔸 **Watch a video of this app running here:** [https://www.youtube.com/watch?v=2kZ7EyEjaXU](https://www.youtube.com/watch?v=p8AJAcoDnH8)
+
 🔸 **Location:** no url yet
 
 🔸 **Author:** Tim Drevitch
