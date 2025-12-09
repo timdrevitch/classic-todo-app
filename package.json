@@ -24,7 +24,7 @@
   "dependencies": {
     "@types/express": "^5.0.6",
     "@types/lodash": "^4.17.21",
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.10.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.2.1",
