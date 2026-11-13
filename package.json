@@ -23,7 +23,7 @@
   "homepage": "https://github.com/",
   "dependencies": {
     "@types/express": "^5.0.6",
-    "@types/lodash": "^4.17.21",
+    "@types/lodash": "^4.17.23",
     "@types/node": "^25.0.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
